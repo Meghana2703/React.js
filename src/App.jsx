@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import Home from './Components/Home';
+import About from './Components/About';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+ let isLogin=true;
   return (
-     <div>
-          <h1>Hello World</h1>
-           
-        </div>
+     <>
+     <h1>Hello World</h1>
+     {/* <Home/> */}
+      {/* <About/> */}
+    {isLogin ? <Home/> : <About/>}//conditional rendering stmt
+    {0 > 1 ? <Home/> : <About/>}
+     </>
+          
   )
 }
 
