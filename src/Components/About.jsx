@@ -1,4 +1,4 @@
-function About() {
+/*function About() {
     let  name="About";
   return (
     <div>
@@ -7,4 +7,11 @@ function About() {
     </div>
   )
 }
-export default About;
+export default About;*/
+import React from 'react'
+
+export default function About() {
+  return (
+    <div>About</div>
+  )
+}

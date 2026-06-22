@@ -25,7 +25,7 @@ function App() {
      {/* <Home/> */}
       {/* <About/> */}
     {isLogin ? <Home/> : <About/>}//conditional rendering stmt
-    {0 > 1 ? <Home/> : <About/>}
+    {0 > 1 ? <Home/> : <About/>} 
      </>
           
   )
