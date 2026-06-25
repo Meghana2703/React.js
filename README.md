@@ -32,3 +32,26 @@ function App() {
 }
 
 export default App
+/props is an object that contains the properties passed to the component
+
+
+/*function Home(props) {
+  return (
+   <>
+    <h1>She is {props.name} and  she is {props.Age}</h1>
+   </>
+  );
+}
+export default Home;
+*/
+/*function Home({name="user",Age="no age"}) {
+  return (
+   <>
+    <h1>She is {name} and  she is {Age}</h1>
+   </>
+  );
+}
+export default Home*/
+//react-route-dom
+
+in react dom there are two doms curr and prv dom

@@ -27,10 +27,73 @@ export default Home;
   );
 }
 export default Home*/
-import React from 'react'
+/*import React from 'react'
 
 export default function Home() {
   return (
     <div>Home</div>
+  )
+}*/
+
+
+/*import { useState } from "react";
+
+export default function Home() {
+  const[count,setCount]=useState(0)
+  const incCount = () => {
+    setCount((prev) => prev+1)
+    //setCount((prev) => prev+1)
+  }
+  const decCount = () => {
+    setCount((prev) => prev-1)
+  }
+  return (
+    <>
+      <h1>{count}</h1>
+      <button onClick={incCount}>+</button>
+      <button onClick={decCount}>-</button>
+    </>
+  )
+}*/
+
+/*import { useState } from "react";
+import React from 'react'
+
+export default function Home() {
+  const[input,setInput] =useState('')
+  return (
+    <>
+    <input type ="text" onChange={(e) => setInput(e.target.value)}/>
+    <h1>{input}</h1>
+    </>
+  )
+}*/
+
+
+import { useEffect, useState } from "react";
+
+export default function Home() {
+  const [count, setCount] = useState(0)
+  const [value, setValue] = useState(0)
+  const incCount = () => {
+    setCount((prev) => prev + 1)
+    //setCount((prev) => prev+1)
+  }
+  const decCount = () => {
+    if (count > 0)
+      setCount((prev) => prev - 1)
+  }
+  useEffect(() => {
+    console.log(value);
+  }, [value, count])
+  return (
+    <>
+      <h1>{count}</h1>
+      <button onClick={incCount}>+</button>
+      <button onClick={decCount}>-</button>
+
+      <h1>{value}</h1>
+      <button onClick={() => setValue(value + 1)}>Change</button>
+    </>
   )
 }
